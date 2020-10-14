@@ -9,11 +9,11 @@ import { Profile } from './Profile';
 
 export class ProfileComponent{
     profile: Profile;
-    
+
     constructor(private profileService: ProfileService){
 
     }
-    ngOnInit(){
+    ngOnInit() {
         this.profileService.getProfile().subscribe((data: Profile) => this.profile = {
             Name: data.Name,
             'Current Designation':  data['Current Designation'],
@@ -21,7 +21,7 @@ export class ProfileComponent{
             email: data.email,
             'short intro': data['short intro'],
             ProfilePic: data.ProfilePic
-        });;
-        
+        });
+
     }
 }
