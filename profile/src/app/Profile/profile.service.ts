@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 @Injectable()
 
 export class ProfileService{
-    baseUrl: string = 'http://10.244.116.34:3000/profile';
-    
+    baseUrl = 'http://10.244.116.34:3000/profile';
+
     constructor(private http: HttpClient ){ }
 
-    getProfile():Observable<Profile> {
-        return this.http.get<Profile>(this.baseUrl, {observe: 'body', responseType: "json" });
+    getProfile(): Observable<Profile> {
+        return this.http.get<Profile>(this.baseUrl, {observe: 'body', responseType: 'json' });
     }
 }

@@ -4,5 +4,5 @@ export interface Profile{
     Company: string;
     email: string;
     'short intro': string;
-    ProfilePic:string;
+    ProfilePic: string;
 }
