@@ -3,25 +3,31 @@ import { ProfileService } from './profile.service';
 import { Profile } from './Profile';
 
 @Component({
-    selector: 'profile',
+    selector: 'app-profile',
     templateUrl: './profile.component.html'
 })
 
 export class ProfileComponent{
-    profile: Profile;
+    profile: Profile[] = [];
+    user: Profile = null;
     
     constructor(private profileService: ProfileService){
 
     }
     ngOnInit(){
-        this.profileService.getProfile().subscribe((data: Profile) => this.profile = {
-            Name: data.Name,
-            'Current Designation':  data['Current Designation'],
-            Company: data.Company,
-            email: data.email,
-            'short intro': data['short intro'],
-            ProfilePic: data.ProfilePic
-        });;
-        
+        this.refreshUsers();
+    }
+
+    refreshUsers(){
+    this.profileService.getProfile().subscribe((data: Profile[]) =>{
+        this.profile = data;
+    });
+    }
+
+    addProfile(){
+        this.profileService.addProfile(this.user).subscribe(data => {
+            console.log(data)
+            this.refreshUsers();
+        })
     }
 }

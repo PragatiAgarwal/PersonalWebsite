@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { ProfileService } from './Profile/profile.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

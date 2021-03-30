@@ -1,8 +1,10 @@
 export interface Profile{
-    Name: string;
-    'Current Designation': string;
-    Company: string;
-    email: string;
-    'short intro': string;
-    ProfilePic:string;
+    full_name           : string;
+    current_designation : string;
+    organization        : string;
+    email               : string;
+    short_intro         : string;
+    profile_pic         : string;
+    pid                 : number;
+    user_id             : string;
 }

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+#grad1{
+    background: rgb(76, 66, 163);
+    background: radial-gradient(circle, rgb(77, 113, 192) 0%, rgba(169, 128, 207, 0.873) 100%);
+    
+}
+img {
+    border-radius: 50%;
+    vertical-align: middle;
+    
+  }
