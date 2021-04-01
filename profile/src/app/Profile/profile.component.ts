@@ -10,7 +10,7 @@ import { Profile } from './Profile';
 export class ProfileComponent{
     profile: Profile[] = [];
     user: Profile = null;
-    
+
     constructor(private profileService: ProfileService){
 
     }
