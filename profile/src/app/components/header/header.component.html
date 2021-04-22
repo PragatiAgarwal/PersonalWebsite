@@ -1,19 +1,24 @@
-<!-- <nav>
-  <a routerLink="/">Home </a> |
-  <a href="../../../assets/Pragati_Agarwal.pdf" download>Download Resume </a> |
-  <a routerLink="/profile">About Me </a> |
-</nav> -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-    <a class="navbar-brand" href="#" style="font-size: 35px; font-weight: bold;">Pragati Agarwal</a>
-    <br>
-    <br>
-    <a routerLink="/">Home </a>
-    <a href="../../../assets/Pragati_Agarwal.pdf" download>Download Resume </a>
-    <a routerLink="/profile">About Me </a>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+    <a class="navbar-brand"  style="font-size: 35px; font-weight: bold;">Pragati Agarwal</a>
 
     <ul class="navbar-nav ml-auto">
-      <!-- <li><a type="button" mdbBtn floating="true" size="lg" color="li" class=" waves-light" mdbWavesEffect><mdb-icon fab icon="linkedin-in"></mdb-icon></a></li> -->
+      <li><a type="button" mdbBtn floating="true" size="lg" color="li" class=" waves-light" mdbWavesEffect><mdb-icon fab icon="linkedin-in"></mdb-icon></a></li>
       <li><a href="#">Link 4</a></li>
       <li><a href="#">Link 5</a></li>
     </ul>
-  </nav>
+  </nav> -->
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" style="font-size: medium;" (click)="closeNav()">&lt;&lt;</a>
+    <a routerLink="/">Home </a>
+    <a href="../../../assets/Pragati_Agarwal.pdf" download>Download Resume </a>
+    <a routerLink="/profile">About Me </a>
+    <a routerLink="/project">Projects</a>
+  </div>
+  <div class="title">
+  <span style="font-size: 30px;font-family: 'Times New Roman', Times, serif;cursor:pointer" (click)="this.openNav()">&#9776; Profile
+  </span>
+    <span><a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+  </span>
+  </div>

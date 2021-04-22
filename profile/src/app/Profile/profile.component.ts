@@ -24,10 +24,4 @@ export class ProfileComponent{
     });
     }
 
-    addProfile(){
-        this.profileService.addProfile(this.user).subscribe(data => {
-            console.log(data)
-            this.refreshUsers();
-        })
-    }
 }

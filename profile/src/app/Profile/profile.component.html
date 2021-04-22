@@ -8,55 +8,18 @@
         <p> Company : {{item?.organization}}</p>
         <p> Short Intro : {{item?.short_intro }}</p>
         <p> user id : {{item?.user_id }}</p>
-        
-        
+
+
     </div>
-    
+
      <div  *ngIf="item?.profile_pic; else ElseBlock">
         Pic Displayed.
         <!-- Pic needs to be inserted!!  -->
     </div>
     </div>
-    
+
     <ng-template #ElseBlock>
         <img src="../../assets/pic.jpg"  width="200" height="200">
-    </ng-template> 
+    </ng-template>
 
-<!-- <div>
-    Enter user details!
-
-    <div>
-        <div>
-          <label>Name: </label>
-          <input [(ngModel)]="user.full_name"/>
-        </div>
-        <div>
-            <label>Id: </label>
-            <input [(ngModel)]="user.pid"/>
-          </div>
-          <div>
-            <label>Email: </label>
-            <input [(ngModel)]="user.email"/>
-          </div>
-          <div>
-            <label>Organization: </label>
-            <input [(ngModel)]="user.organization"/>
-          </div>
-          <div>
-            <label>CurrentDesignation: </label>
-            <input [(ngModel)]="user.current_designation"/>
-          </div>
-          <div>
-            <label>short Intro: </label>
-            <input [(ngModel)]="user.short_intro"/>
-          </div>
-          <div>
-            <label>Profile Pic: </label>
-            <input [(ngModel)]="user.profile_pic"/>
-          </div>
-        <div>
-          <button (click)="addProfile()">Add</button>
-        </div>
-      </div>
-
-</div> -->
+    <app-reactive-form></app-reactive-form>

@@ -1,0 +1,35 @@
+<div>
+  <form [formGroup] = "profileForm">
+    <label>
+      Full Name:
+      <input type="text" formControlName="full_name" />
+    </label>
+    <br>
+    <label>
+      Designation:
+      <input type="text" formControlName="current_designation" />
+    </label>
+    <br>
+    <label>
+      Organization:
+      <input type="text" formControlName="organization" />
+    </label>
+    <br>
+    <label>
+      Email:
+      <input type="text" formControlName="email" />
+    </label>
+    <br>
+    <label>
+      Short Description:
+      <input type="text" formControlName="short_intro" />
+    </label>
+    <br>
+    <label>
+      pid:
+      <input type="text" formControlName="pid" />
+    </label>
+
+  </form>
+  <button (click)="onSubmit()">Submit</button>
+</div>

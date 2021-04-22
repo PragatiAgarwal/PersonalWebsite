@@ -1,0 +1,7 @@
+<div *ngFor="let repo of gitRepo">
+  <p> Project Name : {{repo.name}} </p>
+  <p> Project Description : {{repo.description}} </p>
+  <p> Project Url : {{repo.html_url}} </p>
+  <app-project-languages-used [repoLanguagesUrl]="repo.languages_url"></app-project-languages-used>
+</div>
+
